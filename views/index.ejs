@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Songs Classifier</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/stylesheets/index.css">
+</head>
+<body>
+    <div class="container">
+        <form action="/moodEvaluation" method="POST">
+        <div id="form-one">
+            <h1>Danceability :- <span id="danceabilityDisplay">0</span> </h1>
+            <input class="danceability" type="range" name="danceability" value="0" min="0" max="1" step="0.001" onChange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)">
+        </div>
+        <br>
+        <div id="form-two">
+            <h1>Energy :- <span id="energyDisplay">0</span> </h1>
+            <input class="energy" type="range" name="energy" value="0" min="0" max="1" step="0.001" onChange="rangeSlide1(this.value)" onmousemove="rangeSlide1(this.value)">
+        </div>
+        <br>
+        <div id="form-three">
+            <h1>Loudness :- <span id="loudDisplay">0</span> </h1>
+            <input class="loudness" type="range" name="loudness" value="0" min="0" max="1" step="0.001" onChange="rangeSlide2(this.value)" onmousemove="rangeSlide2(this.value)">
+        </div>
+        <br>
+        <div id="form-four">
+            <h1>Speechiness :- <span id="speechinessDisplay">0</span> </h1>
+            <input class="speechiness" type="range" name="speechiness" value="0" min="0" max="1" step="0.001" onChange="rangeSlide3(this.value)" onmousemove="rangeSlide3(this.value)">
+        </div>
+        <div id="form-five">
+            <h1>Acousticness :- <span id="acousticnessDisplay">0</span> </h1>
+            <input class="acousticness" type="range" name="acousticness" value="0" min="0" max="1" step="0.001" onChange="rangeSlide4(this.value)" onmousemove="rangeSlide4(this.value)">
+        </div>
+        <div id="form-six">
+            <h1>Instrumentalness :- <span id="instrumentalnessDisplay">0</span> </h1>
+            <input class="instrumentalness" type="range" name="instrumentalness" value="0" min="0" max="1" step="0.001" onChange="rangeSlide5(this.value)" onmousemove="rangeSlide5(this.value)">
+        </div>
+        <div id="form-seven">
+            <h1>Liveness :- <span id="livenessDisplay">0</span> </h1>
+            <input class="liveness" type="range" name="liveness" value="0" min="0" max="1" step="0.001" onChange="rangeSlide6(this.value)" onmousemove="rangeSlide6(this.value)">
+        </div>
+        <div id="form-eight">
+            <h1>Valence :- <span id="valenceDisplay">0</span> </h1>
+            <input class="valence" type="range" name="valence" value="0" min="0" max="1" step="0.001" onChange="rangeSlide7(this.value)" onmousemove="rangeSlide7(this.value)">
+        </div>
+        <div id="form-nine">
+            <h1>Tempo :- <span id="tempoDisplay">0</span> </h1>
+            <input class="tempo" type="range" name="tempo" value="0" min="0" max="1" step="0.001" onChange="rangeSlide8(this.value)" onmousemove="rangeSlide8(this.value)">
+        </div>
+        <br>
+        <input type="submit">
+        <br>
+    </form>
+        
+    </div>
+    
+    <script type="text/javascript">
+        function rangeSlide(value) {
+            document.getElementById('danceabilityDisplay').innerHTML = value;
+        }
+        function rangeSlide1(value) {
+            document.getElementById('energyDisplay').innerHTML = value;
+        }
+        function rangeSlide2(value) {
+            document.getElementById('loudDisplay').innerHTML = value;
+        }
+        function rangeSlide3(value) {
+            document.getElementById('speechinessDisplay').innerHTML = value;
+        }
+        function rangeSlide4(value) {
+            document.getElementById('acousticnessDisplay').innerHTML = value;
+        }
+        function rangeSlide5(value) {
+            document.getElementById('instrumentalnessDisplay').innerHTML = value;
+        }
+        function rangeSlide6(value) {
+            document.getElementById('livenessDisplay').innerHTML = value;
+        }
+        function rangeSlide7(value) {
+            document.getElementById('valenceDisplay').innerHTML = value;
+        }
+        function rangeSlide8(value) {
+            document.getElementById('tempoDisplay').innerHTML = value;
+        }
+    </script>
+<%- include ('./partials/footer.ejs'); -%>
